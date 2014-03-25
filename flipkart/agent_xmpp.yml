@@ -1,0 +1,6 @@
+jid: flipkart@lmnopapp.com
+password: lmnop123
+roster:
+    -   
+        jid: amar@lmnopapp.com
+        groups: [admin, Tickets]
