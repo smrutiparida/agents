@@ -6,7 +6,7 @@ require 'daemons'
 
 #Daemons.run '/home/diaspora/agent_xmpp/flipkart/offers.rb'
 pwd  = File.dirname(File.expand_path(__FILE__))
-file1 = pwd + '/flipkart/offers.rb'
+file1 = pwd + '/flipkart/offer.rb'
 file2 = pwd + '/railways/pnr.rb'
 
 Daemons.run_proc(
@@ -21,4 +21,12 @@ Daemons.run_proc(
    :log_output => true
  ) do
    exec "ruby #{file2}"
+end
+
+file3 = '/home/diaspora/custom_timeline/timeline.rb'
+Daemons.run_proc(
+   'timeline_daemon', # name of daemon
+   :log_output => true
+ ) do
+   exec "ruby #{file3}"
 end

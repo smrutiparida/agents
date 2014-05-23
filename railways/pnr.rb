@@ -6,8 +6,8 @@ require 'net/http'
 require 'json'
 
 chat do
-  out = Net::HTTP.get('lmnopapp.com','/railways/pnr?q=' + params[:body])
-#  print out
+  out = Net::HTTP.get('www.peoplefied.com','/railways/pnr?q=' + params[:body])
+  print out
   res = []
   res = JSON.parse(out) unless out.empty?
   out_status = ""
@@ -20,7 +20,7 @@ chat do
     end
   end
   out_status
-#  res.body
+# res.body
 #  params[:body].reverse
 end
 #command 'helo' do

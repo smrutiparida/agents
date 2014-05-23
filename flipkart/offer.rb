@@ -6,7 +6,7 @@ require 'net/http'
 require 'json'
 
 chat do
-  out = Net::HTTP.get('lmnopapp.com','/railways/pnr?q=' + params[:body])
+  out = Net::HTTP.get('www.peoplefied.com','/railways/pnr?q=' + params[:body])
 #  print out
   res = []
   res = JSON.parse(out) unless out.empty?
